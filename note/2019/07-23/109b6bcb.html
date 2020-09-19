@@ -1,0 +1,1733 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="google-site-verification" content="V45mJ0rfpM2_oJWrW4Nfzlv0pmxnKGYFUwiz_9XQ51E">
+<!--加载条-->
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="https://cdn.webfont.youziku.com/webfonts/nomal/129645/33899/5cf0e452f629d80774a3a155.css" rel="stylesheet" type="text/css">
+<link href="https://db.onlinewebfonts.com/c/01a1cdebb8bf5b8573622fa6f689369c?family=Vladimir+Script" rel="stylesheet" type="text/css">
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837686-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-157837686-1');
+</script>
+
+
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+<!--分割线-->
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="IP地址,子网掩码,网关">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Hoo.C.lon" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="如何理解IP地址、子网掩码、网关？请看这篇文章让你彻底理清IP地址、子网掩码、网关">
+<meta name="keywords" content="IP地址,子网掩码,网关">
+<meta property="og:type" content="article">
+<meta property="og:title" content="这篇文章让你彻底理清IP地址、子网掩码、网关">
+<meta property="og:url" content="https://hoochanlon.github.io/note/2019/07-23/109b6bcb.html">
+<meta property="og:site_name" content="Hoo.C.lon">
+<meta property="og:description" content="如何理解IP地址、子网掩码、网关？请看这篇文章让你彻底理清IP地址、子网掩码、网关">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.postimg.cc/CK5Jx50Z/Snipaste-2019-07-14-11-48-46.png">
+<meta property="og:image" content="https://i.postimg.cc/MpGDJCmY/ping-plus.gif">
+<meta property="og:image" content="https://i.postimg.cc/J4WHR5By/Snipaste-2019-07-14-15-04-15.png">
+<meta property="og:image" content="https://i.postimg.cc/sgq1nDCk/pc-not-Conn-plus.gif">
+<meta property="og:image" content="https://i.postimg.cc/MHTx5Wq3/ping-t.gif">
+<meta property="og:updated_time" content="2020-09-19T03:10:00.102Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="这篇文章让你彻底理清IP地址、子网掩码、网关">
+<meta name="twitter:description" content="如何理解IP地址、子网掩码、网关？请看这篇文章让你彻底理清IP地址、子网掩码、网关">
+<meta name="twitter:image" content="https://i.postimg.cc/CK5Jx50Z/Snipaste-2019-07-14-11-48-46.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://hoochanlon.github.io/note/2019/07-23/109b6bcb.html">
+
+
+
+
+
+  <title>这篇文章让你彻底理清IP地址、子网掩码、网关 | Hoo.C.lon</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-157837686-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+  <!--动态标题-->
+<script type="text/javascript" charset="utf-8" src="/loremwalker.github.io/js/src/dytitle.js"></script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+   <a href="https://github.com/hoochanlon/hoochanlon.github.io">
+   <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+   </a>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">
+        Hoo.C.lon
+        </span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">相对于QQ空间，这也许稍封闭更简致</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-todolist">
+          <a href="/ToDoList/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-list"></i> <br>
+            
+            ToDoList
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-photo">
+          <a href="/photo/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-photo"></i> <br>
+            
+            相册
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hoochanlon.github.io/note/2019/07-23/109b6bcb.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hoo">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://raw.githubusercontent.com/hoochanlon/hoochanlon.github.io/master/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hoo.C.lon">
+    </span>
+    
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">这篇文章让你彻底理清IP地址、子网掩码、网关</h1>
+        
+
+        <div class="post-meta">
+        
+        
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-23T20:35:19+08:00">
+                2019-07-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/零散笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">零散笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o">&nbsp;累计阅读文本次</i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2,984 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  12 分钟
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  如何理解IP地址、子网掩码、网关？请看这篇文章让你彻底理清IP地址、子网掩码、网关
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="IP地址的设计"><a href="#IP地址的设计" class="headerlink" title="IP地址的设计"></a>IP地址的设计</h1><p>IP地址是一个32位的二进制数，通常被分割为4个“8位二进制数”（也就是4个字节）。IP地址通常用“点分十进制”表示成（a.b.c.d）的形式，其中，a,b,c,d都是0~255之间的十进制整数。例：点分十进IP地址（100.4.5.6），实际上是32位二进制数（01100100.00000100.00000101.00000110）。</p>
+<p>公有地址（Public address）由Inter NIC（Internet Network Information Center因特网信息中心）负责。这些IP地址分配给注册并向Inter NIC提出申请的组织机构。通过它直接访问因特网。</p>
+<blockquote>
+<p>摘自 <a href="https://baike.baidu.com/item/IP%E5%9C%B0%E5%9D%80#4_8" target="_blank" rel="noopener">百度百科-IP地址</a></p>
+</blockquote>
+<h2 id="IP地址的种类"><a href="#IP地址的种类" class="headerlink" title="IP地址的种类"></a>IP地址的种类</h2><h3 id="ABC类地址的划分"><a href="#ABC类地址的划分" class="headerlink" title="ABC类地址的划分"></a>ABC类地址的划分</h3><p>划分只是为了较为规范化的管理，就像软件框架一样进行约定，负责的功能模块及条理也清晰了许多；但这类规范并不是强制性要求，只是有效合理的划分可以节省更多的ip资源，也可缓解IP地址紧缺（资源不够用）。</p>
+<ul>
+<li>A类保留政府机构</li>
+<li>B类分配给中等规模公司</li>
+<li>C类分配给需要的任何人</li>
+<li>D类地址用于网管专业配置地址</li>
+<li>E类地址用于研发人员的科研实验</li>
+</ul>
+<p>D、E类IP普及受众范围小，普众的实际使用率低，因此非重点述说。</p>
+<p>私有地址属于非注册地址，专门为组织机构内部使用（局域网）。以下列出留用的内部私有地址：</p>
+<ul>
+<li><strong>A类 10.0.0.0–10.255.255.255</strong></li>
+<li><strong>B类 172.16.0.0–172.31.255.255</strong></li>
+<li><strong>C类 192.168.0.0–192.168.255.255</strong></li>
+</ul>
+<p>关于划分A、B、C类IP地址就涉及到下章节：子网掩码-ABC类IP地址最大网络范围与最大可用主机数</p>
+<h2 id="网络地址与广播地址"><a href="#网络地址与广播地址" class="headerlink" title="网络地址与广播地址"></a>网络地址与广播地址</h2><blockquote>
+<p>编改自 <a href="https://blog.51cto.com/ccccc/385956" target="_blank" rel="noopener">网络地址和广播地址的作用</a></p>
+</blockquote>
+<p>网络地址：</p>
+<p>网络地址是识别网络ID用的 ，如192.168.1.0 ，说明该网段属于192.168.1的段 ，属于不可用IP；</p>
+<p>广播地址：</p>
+<p>用于进行广播的通用地址 ，如192.168.1.255。PC在询问网关时，把信息发往192.168.1.255，于是192.168.1.1-192.168.1.254的所有机器都可以接收到它发来的信息，信息会问谁是网关你的MAC地址是多少，如果有一台机器是网关他就会回应。</p>
+<h2 id="0-0-0-0与127-0-0-1"><a href="#0-0-0-0与127-0-0-1" class="headerlink" title="0.0.0.0与127.0.0.1"></a>0.0.0.0与127.0.0.1</h2><p>127.0.0.1：</p>
+<p>127.0.0.1即为主机地址，它不能连接互联网或是局域网，只能自身独立使用；只要使用这个地址发送数据，则数据包不会出现在网络传输过程中，常用于屏蔽软件官网对正版的校验。</p>
+<p>0.0.0.0：</p>
+<blockquote>
+<p>摘自 <a href="https://segmentfault.com/q/1010000003732310" target="_blank" rel="noopener">segmentfault - ip地址0.0.0.0是什么意思</a></p>
+</blockquote>
+<p><img src="https://i.postimg.cc/CK5Jx50Z/Snipaste-2019-07-14-11-48-46.png" alt></p>
+<h1 id="子网掩码"><a href="#子网掩码" class="headerlink" title="子网掩码"></a>子网掩码</h1><h2 id="子网掩码的意义"><a href="#子网掩码的意义" class="headerlink" title="子网掩码的意义"></a>子网掩码的意义</h2><p>它是一种用来指明一个IP地址的哪些位<strong>标识</strong>的是主机所在的<strong>网络地址</strong>以及哪些位标识的是<strong>主机地址</strong>的位掩码。 一个IP地址的网络部分被称为网络号或者网络地址，子网掩码根据逻辑与运算，得出的结果是相同的网络号，则说明这两台计算机是处于同一个子网络上的，可以进行直接与具有相同的网络号的设备通讯。</p>
+<blockquote>
+<p>此部分查阅参考了 <a href="https://zh.wikipedia.org/wiki/%E5%AD%90%E7%BD%91#%E7%BD%91%E7%BB%9C%E6%8E%A9%E7%A0%81" target="_blank" rel="noopener">网络掩码 - wiki</a>、<a href="https://baike.baidu.com/item/%E4%B8%BB%E6%9C%BA%E5%9C%B0%E5%9D%80" target="_blank" rel="noopener">百度百科-主机地址</a> </p>
+</blockquote>
+<h2 id="子网掩码ABC类IP地址最大网络范围与最大可用主机数"><a href="#子网掩码ABC类IP地址最大网络范围与最大可用主机数" class="headerlink" title="子网掩码ABC类IP地址最大网络范围与最大可用主机数"></a>子网掩码ABC类IP地址最大网络范围与最大可用主机数</h2><p>IP地址分为两部分，左边部分用来标识主机所在的网络，被称为网络地址，右边被用来标识主机本身，称为主机地址；可左右部分各字节占总比的 ?/4 并不知道，也由此，地址的类别开始进行划分开来。</p>
+<table>
+<thead>
+<tr>
+<th>IP地址类型</th>
+<th>地址表示范围</th>
+<th>缺省（默认）子网掩码</th>
+<th>网络位n与主机位h</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A类地址</td>
+<td>1.0.0.1-127.255.255.255</td>
+<td>255.0.0.0</td>
+<td>0nnnnnnn.hhhhhhhh.<p>hhhhhhhh.hhhhhhhh</p></td>
+</tr>
+<tr>
+<td>B类地址</td>
+<td>128.0.0.1-191.255.255.255</td>
+<td>255.255.0.0</td>
+<td>10nnnnnn.nnnnnnnn.<p>hhhhhhhh.hhhhhhhh</p></td>
+</tr>
+<tr>
+<td>C类地址</td>
+<td>192.0.0.1-223.255.255.255</td>
+<td>255.255.255.0</td>
+<td>110nnnnn.nnnnnnnn.<p>nnnnnnnn.hhhhhhhh</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="以A类地址说明为例"><a href="#以A类地址说明为例" class="headerlink" title="以A类地址说明为例"></a>以A类地址说明为例</h3><h4 id="A类地址最大网络范围："><a href="#A类地址最大网络范围：" class="headerlink" title="A类地址最大网络范围："></a>A类地址最大网络范围：</h4><p>从1算到127（包括1与127），总数的确是128；但IP地址最后结尾的部分的x.x.x.0为网络地址，最后结尾的部分以x.x.x.255则为广播地址，二者并不能作为ip使用。因此，需要减2，即A类网络可定义2<sup>7</sup>-2=126（A类地址n的个数为7）。</p>
+<h4 id="A类地址最大可用主机数："><a href="#A类地址最大可用主机数：" class="headerlink" title="A类地址最大可用主机数："></a>A类地址最大可用主机数：</h4><p>A类地址默认子网掩码是255.0.0.0，而这个0正好是未被遮罩h字节的部分（3*8=24），所以每个网络可以拥有最大可用的主机数为2<sup>24</sup>-2=16777214</p>
+<p><strong>得出公式： `2^n-2 = x类型IP地址最大网络范围；2^h-2 = 最大</strong>可用<strong>主机数`；B类地址、 C类地址类推同理。</strong></p>
+<h2 id="子网划分的IP广播地址与最大可用主机数"><a href="#子网划分的IP广播地址与最大可用主机数" class="headerlink" title="子网划分的IP广播地址与最大可用主机数"></a>子网划分的IP广播地址与最大可用主机数</h2><p>例题2：PC1的ip为192.168.0.3/26，最大可用主机数与广播地址分别是什么？</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/26</td>
+<td>1111 1111</td>
+<td>1111 1111</td>
+<td>1111 1111</td>
+<td>1100 0000</td>
+</tr>
+</tbody>
+</table>
+<p>2<sup>6</sup>-2 最多可用主机数：62 （子网掩码未遮罩的6个0为h，h为主机编号位</p>
+<p>由例题1得出192.168.0.3/26网络地址为192.168.0.0</p>
+<p>公式：<code>网络地址 || (~子网掩码) = 广播地址</code></p>
+<p> 将子网掩码<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" target="_blank" rel="noopener">~ 取反</a></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/26</td>
+<td>1111 1111</td>
+<td>1111 1111</td>
+<td>1111 1111</td>
+<td>1100 0000</td>
+</tr>
+<tr>
+<td>~</td>
+<td>0000 0000</td>
+<td>0000 0000</td>
+<td>0000 0000</td>
+<td>0011 1111</td>
+</tr>
+</tbody>
+</table>
+<p>取反的子网掩码与网络地址进行<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators" target="_blank" rel="noopener">|| 短路与运算</a></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>网络地址</td>
+<td>1100 0000.1010 1000.0000 0000.0000 0000</td>
+<td>192.168.0.0</td>
+</tr>
+<tr>
+<td>~子网掩码</td>
+<td>0000 0000.0000 0000.0000 0000.0011 1111</td>
+<td>0.0.0.63</td>
+</tr>
+<tr>
+<td>广播地址</td>
+<td>1100 0000.1010 1000.0000 0000.0011 1111</td>
+<td>192.168.0.63</td>
+</tr>
+</tbody>
+</table>
+<p>广播地址结果为：192.168.0.63</p>
+<p><strong>快速运算：</strong></p>
+<p><strong>子网掩码 /26，32-26=6（子网掩码未遮罩的6个0为h，h为主机编号位，2<sup>6</sup>-2即最大<ins>可用</ins>主机数；也由此可推出广播地址为</strong>  <strong><code>x.x.x.最大可用主机数+1</code></strong></p>
+<h2 id="子网掩码划分的IP网络地址"><a href="#子网掩码划分的IP网络地址" class="headerlink" title="子网掩码划分的IP网络地址"></a>子网掩码划分的IP网络地址</h2><p>例题1：PC1的ip为192.168.0.3/26，PC2的IP为192.168.0.192/26，双方是否能互相通信？（/26即子网掩码有26个连续1）</p>
+<p>子网掩码转为<a href="https://zh.wikihow.com/%E4%BB%8E%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%8C%E8%BF%9B%E5%88%B6" target="_blank" rel="noopener">二进制</a></p>
+<table>
+<thead>
+<tr>
+<th>子网掩码</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/26</td>
+<td>1111 1111.1111 1111.1111 1111.1100 0000</td>
+</tr>
+<tr>
+<td>dec</td>
+<td>255.255.255.192</td>
+</tr>
+</tbody>
+</table>
+<p>IP地址与子网掩码进行<a href="https://baike.baidu.com/item/%E9%80%BB%E8%BE%91%E4%B8%8E" target="_blank" rel="noopener">&amp;&amp; 逻辑与运算</a></p>
+<p>PC1</p>
+<p>注：（&amp;&amp;： 逻辑与运算、bin： 二进制、dec： 十进制）</p>
+<table>
+<thead>
+<tr>
+<th>&amp;&amp;</th>
+<th>bin</th>
+<th>dec</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IP地址</td>
+<td>1100 0000.1010 1000.0000 0000.0000 0011</td>
+<td>192.168.0.3</td>
+</tr>
+<tr>
+<td>子网掩码</td>
+<td>1111 1111.1111 1111.1111 1111.1100 0000</td>
+<td>255.255.255.192</td>
+</tr>
+<tr>
+<td>结果 网络地址</td>
+<td>1100 0000.1010 1000.0000 0000.0000 0000</td>
+<td>192.168.0.0</td>
+</tr>
+</tbody>
+</table>
+<p>PC2</p>
+<table>
+<thead>
+<tr>
+<th>&amp;&amp;</th>
+<th>bin</th>
+<th>dec</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IP地址</td>
+<td>1100 0000.1010 1000.0000 0000.1100 0000</td>
+<td>192.168.0.192</td>
+</tr>
+<tr>
+<td>子网掩码</td>
+<td>1111 1111.1111 1111.1111 1111.1100 0000</td>
+<td>255.255.255.192</td>
+</tr>
+<tr>
+<td>结果 网络地址</td>
+<td>1100 0000.1010 1000.0000 0000.1100 0000</td>
+<td>192.168.0.192</td>
+</tr>
+</tbody>
+</table>
+<p>将IP地址与子网掩码的<a href="https://zh.wikihow.com/%E4%BB%8E%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%8C%E8%BF%9B%E5%88%B6" target="_blank" rel="noopener">二进制</a>进行<a href="https://baike.baidu.com/item/%E9%80%BB%E8%BE%91%E4%B8%8E" target="_blank" rel="noopener">&amp;&amp; 逻辑与运算</a>即可得出网络地址；得出网络地址 192.168.0.0（PC1） 与 192.168.0.192 (PC2)不同，所以无法连通。</p>
+<p>当然，相同网段的ip，但不同子网掩码，也是可以连接的；但，这取决于被子网划分的最大可用主机数的多数主机中相比的最小值。不同网络地址的通信这就涉及到下章节：网关的意义</p>
+<p><img src="https://i.postimg.cc/MpGDJCmY/ping-plus.gif" alt></p>
+<h2 id="由例题反证子网掩码的设计"><a href="#由例题反证子网掩码的设计" class="headerlink" title="由例题反证子网掩码的设计"></a>由例题反证子网掩码的设计</h2><p>如果子网掩码不是由连续的1和0组成，而是有部分字节存在0101、 0011这种隔断组成的，要么192.168.0.2、192.168.0.3、192.168.0.4之间中的某一个不处于同一网络地址或全都不处于同一网络地址，这不符合常识。</p>
+<p><img src="https://i.postimg.cc/J4WHR5By/Snipaste-2019-07-14-15-04-15.png" alt></p>
+<h1 id="网关的意义"><a href="#网关的意义" class="headerlink" title="网关的意义"></a>网关的意义</h1><h2 id="简单理解网关和路由器"><a href="#简单理解网关和路由器" class="headerlink" title="简单理解网关和路由器"></a>简单理解网关和路由器</h2><ul>
+<li>可以这么理解，网关即是两个不同的网络地址设备进行通信的点十进制地址，也就是双方进行信息传递的介质</li>
+<li>所谓“路由”，是指把数据从一个地方传送到另一个地方的行为和动作，而路由器，正是执行这种行为动作的机器</li>
+<li>网关定义了边界路由，即ip地址的出口，可以理解成国家之间的交界往返地，<code>中国 &lt;-&gt; 珠穆朗玛峰 &lt;-&gt; 尼泊尔</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">:: 路由器的作用简单文符示意图</span><br><span class="line"></span><br><span class="line">:: ✗ 否定；&lt;——&gt; 连接；✓ 可行；⊃ 自带完全有；</span><br><span class="line"></span><br><span class="line">:: A不能直接访问B</span><br><span class="line">A ——&gt; ✗ ——&gt; B</span><br><span class="line"></span><br><span class="line">:: A需要通过C才能与B进行互相通信传递信息，而这个C就是一个代理</span><br><span class="line"></span><br><span class="line">A &lt;——&gt; C &lt;——&gt; B ✓</span><br><span class="line"></span><br><span class="line">:: A只会汉语、B只会尼泊尔语，而C掌握二者的语言</span><br><span class="line">::（这个语言可以理解成网关，而人也就可以理解成一台路由器），自然可以让双方进行信息传递</span><br><span class="line"></span><br><span class="line">C ⊃ gateway</span><br></pre></td></tr></table></figure>
+<h2 id="例题再现"><a href="#例题再现" class="headerlink" title="例题再现"></a>例题再现</h2><p>例题1：PC1:192.168.1.3/26、PC2:192.168.1.70/26，两台PC是否能进行通信？</p>
+<p>网络地址</p>
+<p>公式：<code>IP地址 &amp;&amp; 子网掩码 = 网络地址</code></p>
+<p>192.168.1.3 &amp;&amp; 255.255.255.192 = 192.168.1.0</p>
+<p>192.168.1.70 &amp;&amp; 255.255.255.0 = 192.168.1.64</p>
+<p>192.168.1.0 ≠ 192.168.1.64</p>
+<p>根据计算PC1与PC2的网络地址不同，由此得出PC1与PC2不能进行通信，以下由 cisco Packet Tracer 进行结论验证支持</p>
+<p><img src="https://i.postimg.cc/sgq1nDCk/pc-not-Conn-plus.gif" alt></p>
+<h2 id="指定网关的设计"><a href="#指定网关的设计" class="headerlink" title="指定网关的设计"></a>指定网关的设计</h2><p> 如何让PC1:192.168.1.3/26、PC2:192.168.1.70/26，两台不同网络地址的PC进行通信？</p>
+<p>答：配置各自PC的网关，并向路由器添加各自的网关地址，即可使两台PC进行信息传递</p>
+<p>一台电脑的默认网关是不可以随随便便指定的，必须<ins>正确指定</ins>，否则一台电脑就会将数据包发给不是网关的电脑，从而无法与其他网络的电脑通信。</p>
+<p><ins>正确指定的前提：</ins> 根据主机已有IP地址类型的<strong>当前具体的网段</strong>所容纳的可用最大主机数范围，进行的一个IP的设定。</p>
+<ol>
+<li><p>算出当前主机网络最大可用容纳范围主机数</p>
+<p> 公式：<code>2^h-2 = 最大可用主机数</code></p>
+<p> 2*（32-26）-2 = 62 (去掉网络地址 192.168.1.0和广播地址 192.168.1.63)</p>
+</li>
+<li><p>求出当前主机IP的所在子网划分范围</p>
+<p> <strong>当前IP地址的子网划分范围也就是当前网关设置的范围</strong></p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>网络地址</th>
+<th>子网掩码</th>
+<th>子网划分范围</th>
+<th>广播地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>192.168.1.0</td>
+<td>255.255.255.192</td>
+<td>1~62</td>
+<td>192.168.1.63</td>
+</tr>
+<tr>
+<td>192.168.1.64</td>
+<td>255.255.255.192</td>
+<td>65~126</td>
+<td>192.168.1.127</td>
+</tr>
+<tr>
+<td>192.168.1.128</td>
+<td>255.255.255.192</td>
+<td>129~190</td>
+<td>192.168.1.191</td>
+</tr>
+<tr>
+<td>192.168.1.192</td>
+<td>255.255.255.192</td>
+<td>193~254</td>
+<td>192.168.1.255</td>
+</tr>
+</tbody>
+</table>
+<p>由上表可得出公式：</p>
+<ul>
+<li><strong>子网划分从第二网段开始的<ins>网络地址</ins>=广播地址+1</strong></li>
+<li><strong>子网划分从第二网段开始的可容纳主机范围最小值=广播地址+2</strong></li>
+<li>num：子网划分可容纳主机范围最小值<ul>
+<li>num+(2^h-2)-1 = 子网划分可容纳主机数范围最大值</li>
+</ul>
+</li>
+<li>广播地址 = 子网划分可容纳主机数范围最大值+1</li>
+</ul>
+<p>最后配置各自PC的网关，并向路由器添加各自的网关地址</p>
+<h3 id="主机与路由器的网关配置作业"><a href="#主机与路由器的网关配置作业" class="headerlink" title="主机与路由器的网关配置作业"></a>主机与路由器的网关配置作业</h3><p>首先得启用特权模式，并接着进入全局配置模式才能完成修改接口配置等信息操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//特权模式</span><br><span class="line">Router&gt; enable</span><br><span class="line">//全局配置模式</span><br><span class="line">Router#conf t</span><br><span class="line">//连接网口 是interface fastEthernet 0/0 的简写式</span><br><span class="line">Router(config)#int fa 0/0</span><br><span class="line">//添加PC1的网关地址</span><br><span class="line">Router(config-if)#ip add 192.168.1.60 255.255.255.192</span><br><span class="line">//启用网口，生效配置</span><br><span class="line">Router(config-if)#no shutdown</span><br><span class="line"></span><br><span class="line">Router(config-if)#int fa 0/1	</span><br><span class="line">//添加PC2的网关地址</span><br><span class="line">Router(config-if)#ip add 192.168.1.126 255.255.255.192	</span><br><span class="line">Router(config-if)#no shutdown</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.postimg.cc/MHTx5Wq3/ping-t.gif" alt></p>
+
+      
+    </div>
+    
+    
+    
+<div>
+  
+    <div>
+    
+    <style>
+    .passage_end::after{
+        content: "- The End -";
+        text-align:center;
+        color: #252525;
+        display: block;
+        font-size:26px;
+        font-weight:bold;
+        font-family: Vladimir Script;
+    }
+    </style>
+        <div class="passage_end"></div>
+    
+</div>
+  
+</div>
+
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/note/2019/07-23/109b6bcb.html">这篇文章让你彻底理清IP地址、子网掩码、网关</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Hoo 的个人博客">Hoo</a></p>
+  <p><span>发布时间:</span>2019年07月23日 - 20:07</p>
+  <p><span>最后更新:</span>2020年09月19日 - 11:09</p>
+  <p><span>原始链接:</span><a href="/note/2019/07-23/109b6bcb.html" title="这篇文章让你彻底理清IP地址、子网掩码、网关">https://hoochanlon.github.io/note/2019/07-23/109b6bcb.html</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://hoochanlon.github.io/note/2019/07-23/109b6bcb.html" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)">署名-非商业性使用-共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
+      
+</div>
+
+    
+      
+
+
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/network/" rel="tag"><i class="fa fa-tag"></i>network</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/note/2019/06-10/c35ada34.html" rel="next" title="2019年6月10日 星期一 阵雨">
+                <i class="fa fa-chevron-left"></i> 2019年6月10日 星期一 阵雨
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/note/2019/08-11/e8d88670.html" rel="prev" title="wim镜像封装">
+                wim镜像封装 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80ODUxMC8yNTAwNA=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://raw.githubusercontent.com/hoochanlon/hoochanlon.github.io/master/uploads/avatar.png" alt="Hoo">
+            
+              <p class="site-author-name" itemprop="name">Hoo</p>
+              <p class="site-description motion-element" itemprop="description">记录生活，留住心声</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">85</span>
+                  <span class="site-state-item-name">归档</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:hoochanlon@outlook.com" target="_blank" title="Outlook">
+                      
+                        <i class="fa fa-fw fa-envelope-square"></i>Outlook</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/hoochanlon" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://t.me/hoochanlon" target="_blank" title="telegram">
+                      
+                        <i class="fa fa-fw fa-telegram"></i>telegram</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="http://creativecommons.org/licenses/by-nc/4.0" class="cc-opacity" target="_blank" rel="external nofollow">
+                <img src="/images/cc-by-nc.svg" alt="Creative Commons">
+              </a>
+            </div>
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://demo.glyptodon.com" target="_blank" rel="external nofollow">demo-pc</a>
+                  </li>
+                
+              </ul>
+              <div id="days"></div>
+
+<script language="javascript">
+function show_date_time(){
+window.setTimeout("show_date_time()", 1000);
+BirthDay=new Date("02/28/2018 13:00:00");
+today=new Date();
+timeold=(today.getTime()-BirthDay.getTime());
+sectimeold=timeold/1000
+secondsold=Math.floor(sectimeold);
+msPerDay=24*60*60*1000
+e_daysold=timeold/msPerDay
+daysold=Math.floor(e_daysold);
+e_hrsold=(e_daysold-daysold)*24;
+hrsold=setzero(Math.floor(e_hrsold));
+e_minsold=(e_hrsold-hrsold)*60;
+minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+seconds=setzero(Math.floor((e_minsold-minsold)*60));
+document.getElementById('days').innerHTML="已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}
+function setzero(i){
+if (i<10)
+{i="0" + i};
+return i;
+}
+show_date_time();
+</script>
+
+            </div>
+          
+
+          
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#IP地址的设计"><span class="nav-number">1.</span> <span class="nav-text">IP地址的设计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IP地址的种类"><span class="nav-number">1.1.</span> <span class="nav-text">IP地址的种类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ABC类地址的划分"><span class="nav-number">1.1.1.</span> <span class="nav-text">ABC类地址的划分</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络地址与广播地址"><span class="nav-number">1.2.</span> <span class="nav-text">网络地址与广播地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0-0-0-0与127-0-0-1"><span class="nav-number">1.3.</span> <span class="nav-text">0.0.0.0与127.0.0.1</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#子网掩码"><span class="nav-number">2.</span> <span class="nav-text">子网掩码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#子网掩码的意义"><span class="nav-number">2.1.</span> <span class="nav-text">子网掩码的意义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子网掩码ABC类IP地址最大网络范围与最大可用主机数"><span class="nav-number">2.2.</span> <span class="nav-text">子网掩码ABC类IP地址最大网络范围与最大可用主机数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#以A类地址说明为例"><span class="nav-number">2.2.1.</span> <span class="nav-text">以A类地址说明为例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#A类地址最大网络范围："><span class="nav-number">2.2.1.1.</span> <span class="nav-text">A类地址最大网络范围：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#A类地址最大可用主机数："><span class="nav-number">2.2.1.2.</span> <span class="nav-text">A类地址最大可用主机数：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子网划分的IP广播地址与最大可用主机数"><span class="nav-number">2.3.</span> <span class="nav-text">子网划分的IP广播地址与最大可用主机数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子网掩码划分的IP网络地址"><span class="nav-number">2.4.</span> <span class="nav-text">子网掩码划分的IP网络地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#由例题反证子网掩码的设计"><span class="nav-number">2.5.</span> <span class="nav-text">由例题反证子网掩码的设计</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网关的意义"><span class="nav-number">3.</span> <span class="nav-text">网关的意义</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单理解网关和路由器"><span class="nav-number">3.1.</span> <span class="nav-text">简单理解网关和路由器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题再现"><span class="nav-number">3.2.</span> <span class="nav-text">例题再现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指定网关的设计"><span class="nav-number">3.3.</span> <span class="nav-text">指定网关的设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主机与路由器的网关配置作业"><span class="nav-number">3.3.1.</span> <span class="nav-text">主机与路由器的网关配置作业</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hoo</span>
+
+  
+</div>
+
+
+ <div class="powered-by">由 <a class="theme-link" href="http://hexo.io" style="color:#bbbbbb" rel="external nofollow">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow" style="color:#bbbbbb">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user-o">&nbsp;访客访问次数:</i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye">&nbsp;累计站点阅览量:</i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
