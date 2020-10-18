@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hoochanlon.github.io/"/>
-  <updated>2020-10-11T21:47:20.342Z</updated>
+  <updated>2020-10-18T16:31:39.595Z</updated>
   <id>https://hoochanlon.github.io/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>由施工后跳线接入转向溯源电话运作原理</title>
+    <link href="https://hoochanlon.github.io/note/2020/10-19/92a87465.html"/>
+    <id>https://hoochanlon.github.io/note/2020/10-19/92a87465.html</id>
+    <published>2020-10-18T16:27:45.000Z</published>
+    <updated>2020-10-18T16:31:39.595Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="施工后电话跳线所遇到的问题"><a href="#施工后电话跳线所遇到的问题" class="headerlink" title="施工后电话跳线所遇到的问题"></a>施工后电话跳线所遇到的问题</h2><p>装修后，寻到对应话机内部主线，跳线接入到内线后，用电话测试发现只有电流而无拨号音，怎么回事？</p><p>首先我们怀疑是线序的问题，找了施工方查清了线序，线架上是黑色、绿色，新续接的线对应是绿色、蓝色。</p><p><img src="https://i.loli.net/2020/10/18/NguFtKPLsMoUQw3.png" alt="Snipaste_2020-10-18_21-26-22.png"></p><p>这里说明一下，电话线用两根线才能构成电流的回路，因为电流也必须有来有回。如果用一根电线，电流就无法流动，电流不流动就无法传递声音。</p><p><img src="https://i.loli.net/2020/10/18/w7ORyUI8VnEKHdc.png" alt="Snipaste_2020-10-18_12-25-54.png"></p><p>就算座位上的线序不对，机柜这边其实是能通话的，因为机柜外线配线架已经是直接我的测试电话机的。再者用鳄鱼夹挨个试线序总不会错吧？</p><p><img src="https://i.loli.net/2020/10/18/u3821rzJMYQ4IcC.png" alt="Snipaste_2020-10-18_22-13-16.png"></p><p>可现在只有电流音，这就很奇怪？！正常接通后应该是有拨号音的，难道联通又出现问题了？联通真的出问题了吗？要是几个分机出问题有可能，但联通那边大面积几乎全体出问题，这不可能 。电话致电了联通也确认没问题，现在又排除了联通那边出问题，那到底是哪里的问题呢？</p><p>施工方也很肯定的表示没动过机柜，我们也肯定外线也没动过，现在确认还是内线的问题，内线松动了吗？也不是，如果是松动的，那么施工之前就不可能还可以拨号打电话的。那是什么原因呢？</p><p>将跳线打入施工方未续过的电话线位置，经测试还是只有电流音。外线同样存在此类情况，情况就一直僵持着。到最后我们开始检查机柜电话设备插头、线路、电源有没有接入正确或异常。</p><p>这回终于发现了原因就是光猫电源没插上…由此开始深入电话原理，在了解原理前先明白模拟电话、数字电话和IP电话的名词概念。</p><h2 id="电话结构原理发展概述"><a href="#电话结构原理发展概述" class="headerlink" title="电话结构原理发展概述"></a>电话结构原理发展概述</h2><p>在我们讲解原理前，我们首先解释几个名词。</p><p>综合布线：</p><p><strong>综合布线就是利用同一接口和同一传输介质，让各种不同信息传输。</strong>具体行为表现为将电话线或网线通过110配线架RJ45口跳线至办公座位的对应端口，让用户的电话能正常通话，电脑接网络能正常上网。</p><p>此图配线架研发110多种产品原型，所以现在叫110配线架</p><p><img src="https://i.loli.net/2020/10/17/IHtqmSYAJgEcb5D.png" alt="Snipaste_2020-10-17_23-14-52.png"></p><p>跳线图</p><blockquote><p>图片摘自 <a href="http://www.elecfans.com/baike/wangluo/jiaohuanji/20180307644007_3.html" target="_blank" rel="noopener">电话交换机与配线箱接法接法图 - 电子发烧友</a></p></blockquote><p><img src="https://i.loli.net/2020/10/18/iY6Zy94LOXJNHFK.png" alt="U341.png"></p><h3 id="传统电话与IP电话拓扑结构"><a href="#传统电话与IP电话拓扑结构" class="headerlink" title="传统电话与IP电话拓扑结构"></a>传统电话与IP电话拓扑结构</h3><p>传统的电话、传真业务，一般是通过接入电信局提供的PSTN实现的。这种类型的接入方式使用的是线路交换的方式，独占通信线路。当使用长途业务时，费用很高。</p><blockquote><p> 图片摘自 <a href="http://www.elecfans.com/tongxin/tongxinmokuai/2017/1208/597947.html" target="_blank" rel="noopener">电子发烧友-voip的基本原理</a></p></blockquote><p><img src="https://i.loli.net/2020/10/18/ojuSsEkH64r5LAc.png" alt="2749555-1G20Q0522cP.png"></p><p>如下表，传统电话与网络电话的对比，处于成本与办公区大面积覆盖考量，不少小企业会选择VoIP</p><p><img src="https://i.loli.net/2020/10/18/OhnSqVP6EigIlFW.png" alt></p><p>公共交换电话网络(PSTN)与IP语音传输(VoIP)企业通用拓扑图</p><blockquote><p>图摘自 <a href="https://www.dsliu.com/wenti/4764.html" target="_blank" rel="noopener">世讯电科-VOIP电话系统的FXS和FXO接口的区别</a></p></blockquote><p><img src="https://i.loli.net/2020/10/18/owiqc3u4PNIrSFG.jpg" alt="1-1Q2011Z012c4.jpg"></p><p>FXO(Foreign eXchange Office)是用来连接局端设备与交换机内线来使用，所谓局端设备就是指提供网络接入的局端所提供的设备；FXS(Foreign eXchange Station)，是用来连接传统电话机使用的话音接口，普通话机连接上语音网关的FXS口之后,它能够为话机提供电流与拨号语音。</p><p>PBX(Private Branch Exchange)，即公司内部使用的电话业务网络，系统内部分机用户分享一定数量的外线，它其实说白了就是外线接线盒。</p><p><img src="https://i.loli.net/2020/10/18/EHS59I4tFbwi6Ly.png" alt="Snipaste_2020-10-18_23-15-48.png"></p><blockquote><p>摘自 <a href="https://wenku.baidu.com/view/d838cad6240c844769eaee66.html" target="_blank" rel="noopener">百度文库-FXS和FXO接口的区别</a></p></blockquote><p><a href="https://zhidao.baidu.com/question/186378635.html" target="_blank" rel="noopener">百度知道-IP电话的工作原理是怎样的？</a>对IP电话原理总结的很好，这里做个摘录：</p><p>IP电话就是以Internet作为主要传输介质进行语音传送的。首先，语音信号通过公用电话网络被传输到网络IP电话网关；然后网关再将话音信号转换压缩成数字信号传递进入Internet；而这些数字信号通过遍及全球而成本低廉的网络将信号传递到对方所在地的网关，再由这个网关将数字信号还原成为模拟信号，输入到当地的公共电话网络，最终将语音信号传给收话人。</p><h2 id="电话设备作用求解"><a href="#电话设备作用求解" class="headerlink" title="电话设备作用求解"></a>电话设备作用求解</h2><h3 id="光猫（model）"><a href="#光猫（model）" class="headerlink" title="光猫（model）"></a>光猫（model）</h3><p>我们先了解光猫是干嘛的？再来谈电话</p><p>光猫又称调制调解器，数字信号转换成模拟信号的过程称为“调解”，反之称为“解调” ，它就是用来转换信号的。如果家庭只有一台设备需要联网，只用光猫还是可以的。但把光猫连上路由器，不仅可以省却拨号步骤，而且信号更稳定，通过发射WiFi信号，还能让更多设备共同联网。</p><blockquote><p>参考 <a href="https://baijiahao.baidu.com/s?id=1605777270604382829&amp;wfr=spider&amp;for=pc" target="_blank" rel="noopener">电信小百科-光猫路由器傻傻分不清，家里有了光猫，路由器还有必要吗？</a></p></blockquote><p>现在的固话基本都是光纤介入了，从电信机房到家里所有的传输线路都是光纤，然后家里的固话并不能直接识别这种信号，所以需要安装光猫，光猫的尾纤连接光纤接收光信号，并转换成数字信号，再通过RJ11接口使固定电话正常使用。</p><p>提问：<a href="https://zhidao.baidu.com/question/354712749.html" target="_blank" rel="noopener">百度知道-没有光猫可以打电话吗?</a></p><p><img src="https://i.loli.net/2020/10/18/VTISqE7woCxZMyO.png" alt="Snipaste_2020-10-18_23-40-17.png"></p><h3 id="模拟电话、数字电话、IP电话"><a href="#模拟电话、数字电话、IP电话" class="headerlink" title="模拟电话、数字电话、IP电话"></a>模拟电话、数字电话、IP电话</h3><p>电话发展到今天大致经过了模拟电话——数字电话——IP电话的过程，模拟和数字都是用的RJ11，走的还是传统的专用线路，而IP电话是RJ45接口，完全走互联网。IP电话机的供电方式必须要外接电源适配器，一般电话机通常不需要电源，通过电话线从电信交换机取电。</p><blockquote><p><a href="https://www.sohu.com/a/404912416_120315470" target="_blank" rel="noopener">sohu-IP电话与一般电话的区别</a></p></blockquote><p>模拟话机采用模拟信号进行传输，由于模拟信号的抗干扰性/失真度高等情况，造成产品质量可靠性方面比较差；数字话机的电路在传输时，对模拟信号进行编解码数字化，传输的信号是二进制数字信号，在抗干扰/失真度等质量可靠性方面有很好的保证。有支持转码的语音网关也可将模拟变为数字信号。</p><blockquote><p>参考 <a href="http://www.lidason.cn/content/?246.html" target="_blank" rel="noopener">lidason-如何正确区分模拟电话、数字电话和IP电话</a></p></blockquote><h3 id="电话交换机与线控交换机"><a href="#电话交换机与线控交换机" class="headerlink" title="电话交换机与线控交换机"></a>电话交换机与线控交换机</h3><p>电话交换机：公司内部与与外部的通讯信息传输系统。所以有一个相对稳定、安全、快捷、方便的电话交换系统是极其关键的。</p><p>程控交换机：能够提供许多新的用户服务功能，如缩位拨号、来电显示、叫醒业务、呼叫转移、呼叫等待等业务，不再是单一的语音业务了。</p><p>在企业实际工作中，电话交换机与程控交换机基本混为一谈，在使用上目前没太大区别，基本功能都有，目前主要是在原有基础功能上各个厂家产品卖点不同而已。</p><blockquote><p>参考 <a href="https://zhidao.baidu.com/question/207098399.html" target="_blank" rel="noopener">百度知道-电话交换机与程控交换机的区别是什么？</a>；设备图摘自京东商城。</p></blockquote><p><img src="https://i.loli.net/2020/10/18/xvbiAH2knO1jloC.png" alt="Snipaste_2020-10-18_13-20-31.png"></p>]]></content>
+    
+    <summary type="html">
+    
+      不懂原理的盲目，引发我对原理的溯求！
+    
+    </summary>
+    
+      <category term="工作记录" scheme="https://hoochanlon.github.io/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>半夜的一只蚊子带来的启发</title>
     <link href="https://hoochanlon.github.io/note/2020/10-12/c13e4fba.html"/>
     <id>https://hoochanlon.github.io/note/2020/10-12/c13e4fba.html</id>
     <published>2020-10-11T19:23:40.000Z</published>
-    <updated>2020-10-11T21:47:20.342Z</updated>
+    <updated>2020-10-11T21:47:58.894Z</updated>
     
     <content type="html"><![CDATA[<h3 id="story"><a href="#story" class="headerlink" title="story"></a>story</h3><p>长期以来，我一直是用点蚊香、喷花露水的方式驱蚊。可是我的居住环境较为潮湿、通风性也不是很理想，所以蚊香也时常过一段时间就熄了，花露水反倒是刺鼻的酸臭残留在房间…</p><p>小时市面所见的都是吊挂式蚊帐，也老是被我翻来覆去睡得蚊帐掉了。受此影响，我从一开始也不期望蚊帐，在记忆中可以说是没有这项选择了。跟家里人反馈后，他们还是建议我购买蚊帐，我立马将该建议随着抛之脑后，认为这并不能满足我需求，甚至对我不重要；下班或是闲暇在家我也不会想着这码事，来了蚊子点蚊香，睡过一晚就好了，白天又没蚊子骚扰。所以，一直每天持续点蚊香睡觉过夜的状态。</p><p>这次半夜被蚊子咬醒后，我觉察到我的睡眠质量取决于蚊香熄灭的时长，尤其处在这潮湿且通风差的环境中。虽我打算换租的想法，可换租也需要不少时间精力，就算暂且忍一时，这也并不是可靠的权宜之计。</p><p>于是我又想起了蚊帐，在网上搜寻看下有没有符合我需求非吊顶的蚊帐。结果还真有，当时满怀着欣喜，现在写下日记又是无语…</p><p>以下是我的各种思绪及想法</p><h3 id="light"><a href="#light" class="headerlink" title="light"></a>light</h3><p>我们对[商品]的见解受限于平日在固有市场眼前所见，它们对于我们来说也很熟悉，我们平日不大在意它的存在，仅重视[产品]功能上的使用价值；但商家为了[符合]各个人群的需求，就要参考不同人群的环境，设计[满足]此类需求的产品，实现公司营收。因此网店平台上早已有各式各样设计的此类别的商品了，但我们对它只停留在过去的映像及看法，这也是让我们惊讶，感受出产品发展迅速，自己也没跟上发展的原因。</p><ul><li>[商品]：实现功能的同时，设计出符合用户环境、心理等需求，并实现盈利的产品</li><li>[产品]：用户对商品重视程度仅限于功能上的使用价值，不在乎体验，甚至不注重价格</li><li>[符合]：在我看来“符合”一词背后更关注于盈利而设计的产品</li><li>[满足]：“满足”指设计中的用户实际体验效果</li></ul><p>再回顾时想到：</p><p>其实我们考虑问题也是仅满足于解决用户当前提出的问题而提出的建议，甚至连我们自己的建议都是想当然没有考据供别人的参考采纳的，也很少去深入了解”为什么会用户会这么想？“，更不会进行引导式提问挖掘出用户表面问题背后用户所潜藏的核心或是更深层次的需求。</p><p>其实用户有时是知道自己比当前需求更想要某一种需求的，但一直因环境、时间、个人当前记忆、事项等因素无法及时表达出来的，这时就需要我们来将它体现出来。</p>]]></content>
     
@@ -388,26 +408,6 @@
     <summary type="html">
     
       我发现一些思考制定策略并不能用在拖延上，但是结论又被推翻了！但似乎又能并存。
-    
-    </summary>
-    
-      <category term="乌金向日葵" scheme="https://hoochanlon.github.io/categories/%E4%B9%8C%E9%87%91%E5%90%91%E6%97%A5%E8%91%B5/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>进行书的总结与论争执的起源</title>
-    <link href="https://hoochanlon.github.io/note/2020/07-28/e268df38.html"/>
-    <id>https://hoochanlon.github.io/note/2020/07-28/e268df38.html</id>
-    <published>2020-07-28T10:35:10.000Z</published>
-    <updated>2020-09-19T03:10:00.095Z</updated>
-    
-    <content type="html"><![CDATA[<p>先进行关于这三本书的总结。</p><h3 id="《神经的逻辑》的感想"><a href="#《神经的逻辑》的感想" class="headerlink" title="《神经的逻辑》的感想"></a>《神经的逻辑》的感想</h3><p>我们看色情片手淫这也是触发共情，为什么我们看别人做爱能得到满足，但别人展示观赏的物品及旅游所拍摄的景物，我们却因此很难得到满足，而是嫉妒他人，这也是我们所没有的东西。后来我才想明白，得出以下结论：</p><p>原来手淫可以快速实现这样快感的效果，产生这一种已拥有的幻觉，这也是我认为毒品难戒除的原因之一吧。别人愿意show的展品，由于个体间所在阶级与与双方资本的差异，通常我们也是很难在短期内很获取到的，拿的出手的也是心爱之物或以示身份获取人们的认同，博得他人的崇拜感，这也是我们会产生嫉妒的主要原因。</p><p>但我们如果对他们的个人成就展品及沿途风光，先抛开阶级与资本的附带价值，而去感受其本身美好的一面，将其化为意境下的共情，内心也能获得浮躁社会中难求的宁静。这也有利于做出合理的决策，因嫉妒衍生的情绪让我们很容易被别有用心的人降维打击把我们带偏，甚至走向歧途，做出很多不合理的过于偏激的情绪化举动。生活就会美好很多。</p><h3 id="《非暴力沟通》的感想"><a href="#《非暴力沟通》的感想" class="headerlink" title="《非暴力沟通》的感想"></a>《非暴力沟通》的感想</h3><p>我们对某人不符我们的共同情感归属、认知导向的价值观过激的传播行为反感，加之潜藏已久过去催化，直接又以过激言语指责对方。我们的行为一开始是为了让对方看到事件实质的同时，又想要其选择投入我们的立场。但这样往往会无情打击到对方的长久建立的价值观，致使其羞愧而又坚守自己的立场，于是进而双方的争议，逐渐与最初的本意背道而驰。</p><p>所以我们首先必须明确谈话目的，真的需要好好倾听对方得出这样的结论由来即历史（对方的反馈），表达我们的感激，提出请求，改变对方想法其实不是要让我们强行灌输，而是由对方遵从自己意愿的选择。</p><h3 id="《简单逻辑学》的摘录"><a href="#《简单逻辑学》的摘录" class="headerlink" title="《简单逻辑学》的摘录"></a>《简单逻辑学》的摘录</h3><p><strong>条件论证</strong>的可靠与否取决于你对论证中前提与结论的了解程度及它们的联系方式。如果论证的因果关系十分脆弱，就此下结论就是草率的。摘自书本48页</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">A→B</span><br><span class="line">-B</span><br><span class="line">所以，-A</span><br><span class="line"></span><br><span class="line">**条件论证的要点是大前提A→B告诉我们如果A（无论它是什么）成立，那么B也必然成立。**</span><br><span class="line"></span><br><span class="line">如果路易斯在跑步，那么他一定是在移动。</span><br><span class="line">路易斯确实是在跑步。</span><br><span class="line">所以，路易斯在移动。</span><br></pre></td></tr></table></figure><p><strong>选言论证</strong> 原始命题（AvB）中，我们不能直接得出结论（-B），这里我们需要一个中间步骤A来完成整个论证。首先，我们必须要确定两个选言（A、B）中，哪个是正确的。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">AvB　AvB　AvB　AvB</span><br><span class="line">A　   B    -A   -B</span><br><span class="line">所以，-B　所以，-A　所以，B　所以，A</span><br><span class="line"></span><br><span class="line">阿迪尔昨晚或者是坐火车去了华盛顿，或者是坐飞机。</span><br></pre></td></tr></table></figure><p><strong>三段论</strong>的论证，或者是任何一个论证，如果想要得到正确的结论，必须达到两个基本的要求：一是它必须有正确的内容，二是它必须有合理的结构。</p><p>前提正确、结构错误同样带来错误的结论，这时的错误根源是论证结构的缺陷。</p><p><img src="https://i.loli.net/2020/07/29/eAfaZ6hrHdGQTBL.png" alt="Snipaste_2020-07-29_09-16-34.png"></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">每一个M都是P。</span><br><span class="line">每一个S都是M。</span><br><span class="line">所以，每一个S都是P</span><br><span class="line"></span><br><span class="line"># 前提错误</span><br><span class="line">每只狗都有三个头。</span><br><span class="line">牧羊犬是狗。</span><br><span class="line">所以，牧羊犬有三个头。</span><br><span class="line"></span><br><span class="line"># 结构错误如：特称-全称,特称-全称,特称-特称</span><br><span class="line">每只松鼠都是哺乳动物。</span><br><span class="line">每只熊猫都是哺乳动物。</span><br><span class="line">所以，每只熊猫都是松鼠。</span><br></pre></td></tr></table></figure><p><strong>归纳论证</strong>以整体中的某一部分为样本来做研究，以此来代表整体。<strong>你所取的样本必须足够多，多到你可以合理地认为它涵盖了整体中的所有情况。</strong>一个缺乏证据的命题仅仅是一个观点，我们可以自由地选择接受或是不接受。摘自63页</p><p>没有强有力的证据进行反对论证，并不能因此证明其为真。不能仅仅因为你不能证明我是错的，就说我的观点是对的。摘自91页</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">每棵树都有根系。</span><br><span class="line">门边的白杨是树。</span><br><span class="line">所以，门边的白杨有根系。</span><br><span class="line"></span><br><span class="line">比尔盖茨是人</span><br><span class="line">比尔盖茨高中辍学</span><br><span class="line">所以，每个人高中辍学都能成功</span><br></pre></td></tr></table></figure><p>一件事恰巧出现在另一件事之前以先后论因果，但这并不足以断定它们之间必然有因果关系。我们需要更多的信息来判断。如果我们只能得到这么多信息，那么我们能得出的最好结论是，先发生的事情可能是后发生事情的原因。</p>]]></content>
-    
-    <summary type="html">
-    
-      逻辑谬误，观念不符，负面情绪；但因为人，所以正视它的存在。
     
     </summary>
     
