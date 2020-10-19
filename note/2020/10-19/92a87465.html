@@ -127,6 +127,7 @@
 <meta property="og:image" content="https://i.loli.net/2020/10/18/NguFtKPLsMoUQw3.png">
 <meta property="og:image" content="https://i.loli.net/2020/10/18/w7ORyUI8VnEKHdc.png">
 <meta property="og:image" content="https://i.loli.net/2020/10/18/u3821rzJMYQ4IcC.png">
+<meta property="og:image" content="https://i.loli.net/2020/10/19/oyXBRYp9zEDhW4i.png">
 <meta property="og:image" content="https://i.loli.net/2020/10/17/IHtqmSYAJgEcb5D.png">
 <meta property="og:image" content="https://i.loli.net/2020/10/18/iY6Zy94LOXJNHFK.png">
 <meta property="og:image" content="https://i.loli.net/2020/10/18/ojuSsEkH64r5LAc.png">
@@ -135,7 +136,7 @@
 <meta property="og:image" content="https://i.loli.net/2020/10/18/EHS59I4tFbwi6Ly.png">
 <meta property="og:image" content="https://i.loli.net/2020/10/18/VTISqE7woCxZMyO.png">
 <meta property="og:image" content="https://i.loli.net/2020/10/18/xvbiAH2knO1jloC.png">
-<meta property="og:updated_time" content="2020-10-18T16:31:39.595Z">
+<meta property="og:updated_time" content="2020-10-19T07:17:12.232Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="由施工后跳线接入转向溯源电话运作原理">
 <meta name="twitter:description" content="不懂原理的盲目，引发我对原理的溯求！">
@@ -466,7 +467,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,976 字
+                  2,050 字
                 </span>
               
 
@@ -507,7 +508,7 @@
       
 
       
-        <h2 id="施工后电话跳线所遇到的问题"><a href="#施工后电话跳线所遇到的问题" class="headerlink" title="施工后电话跳线所遇到的问题"></a>施工后电话跳线所遇到的问题</h2><p>装修后，寻到对应话机内部主线，跳线接入到内线后，用电话测试发现只有电流而无拨号音，怎么回事？</p>
+        <h2 id="施工后电话跳线所遇到的问题"><a href="#施工后电话跳线所遇到的问题" class="headerlink" title="施工后电话跳线所遇到的问题"></a>施工后电话跳线所遇到的问题</h2><h3 id="事件一"><a href="#事件一" class="headerlink" title="事件一"></a>事件一</h3><p>装修后，寻到对应话机内部主线，跳线接入到内线后，用电话测试发现只有电流而无拨号音，怎么回事？</p>
 <p>首先我们怀疑是线序的问题，找了施工方查清了线序，线架上是黑色、绿色，新续接的线对应是绿色、蓝色。</p>
 <p><img src="https://i.loli.net/2020/10/18/NguFtKPLsMoUQw3.png" alt="Snipaste_2020-10-18_21-26-22.png"></p>
 <p>这里说明一下，电话线用两根线才能构成电流的回路，因为电流也必须有来有回。如果用一根电线，电流就无法流动，电流不流动就无法传递声音。</p>
@@ -517,7 +518,10 @@
 <p>可现在只有电流音，这就很奇怪？！正常接通后应该是有拨号音的，难道联通又出现问题了？联通真的出问题了吗？要是几个分机出问题有可能，但联通那边大面积几乎全体出问题，这不可能 。电话致电了联通也确认没问题，现在又排除了联通那边出问题，那到底是哪里的问题呢？</p>
 <p>施工方也很肯定的表示没动过机柜，我们也肯定外线也没动过，现在确认还是内线的问题，内线松动了吗？也不是，如果是松动的，那么施工之前就不可能还可以拨号打电话的。那是什么原因呢？</p>
 <p>将跳线打入施工方未续过的电话线位置，经测试还是只有电流音。外线同样存在此类情况，情况就一直僵持着。到最后我们开始检查机柜电话设备插头、线路、电源有没有接入正确或异常。</p>
-<p>这回终于发现了原因就是光猫电源没插上…由此开始深入电话原理，在了解原理前先明白模拟电话、数字电话和IP电话的名词概念。</p>
+<p>这回终于发现了原因就是光猫电源没插上…</p>
+<h3 id="事件二"><a href="#事件二" class="headerlink" title="事件二"></a>事件二</h3><p>电话18号内线卡槽铜片位置偏移，卡槽过大，始终接入不稳，我们考虑要联通更换内线编号。但联系联通代理商更换内线编号，厂商做数据迁移耗时过久，进行如下调置。</p>
+<p><img src="https://i.loli.net/2020/10/19/oyXBRYp9zEDhW4i.png" alt="2020-10-19_12.png"></p>
+<p>由此开始深入电话原理，在了解原理前先明白模拟电话、数字电话和IP电话的名词概念。</p>
 <h2 id="电话结构原理发展概述"><a href="#电话结构原理发展概述" class="headerlink" title="电话结构原理发展概述"></a>电话结构原理发展概述</h2><p>在我们讲解原理前，我们首先解释几个名词。</p>
 <p>综合布线：</p>
 <p><strong>综合布线就是利用同一接口和同一传输介质，让各种不同信息传输。</strong>具体行为表现为将电话线或网线通过110配线架RJ45口跳线至办公座位的对应端口，让用户的电话能正常通话，电脑接网络能正常上网。</p>
@@ -610,7 +614,7 @@
   <p><span>本文标题:</span><a href="/note/2020/10-19/92a87465.html">由施工后跳线接入转向溯源电话运作原理</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Hoo 的个人博客">Hoo</a></p>
   <p><span>发布时间:</span>2020年10月19日 - 00:10</p>
-  <p><span>最后更新:</span>2020年10月19日 - 00:10</p>
+  <p><span>最后更新:</span>2020年10月19日 - 15:10</p>
   <p><span>原始链接:</span><a href="/note/2020/10-19/92a87465.html" title="由施工后跳线接入转向溯源电话运作原理">https://hoochanlon.github.io/note/2020/10-19/92a87465.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://hoochanlon.github.io/note/2020/10-19/92a87465.html" aria-label="复制成功！"></i></span>
   </p>
@@ -878,7 +882,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#施工后电话跳线所遇到的问题"><span class="nav-number">1.</span> <span class="nav-text">施工后电话跳线所遇到的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#电话结构原理发展概述"><span class="nav-number">2.</span> <span class="nav-text">电话结构原理发展概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#传统电话与IP电话拓扑结构"><span class="nav-number">2.1.</span> <span class="nav-text">传统电话与IP电话拓扑结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#电话设备作用求解"><span class="nav-number">3.</span> <span class="nav-text">电话设备作用求解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#光猫（model）"><span class="nav-number">3.1.</span> <span class="nav-text">光猫（model）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模拟电话、数字电话、IP电话"><span class="nav-number">3.2.</span> <span class="nav-text">模拟电话、数字电话、IP电话</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#电话交换机与线控交换机"><span class="nav-number">3.3.</span> <span class="nav-text">电话交换机与线控交换机</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#施工后电话跳线所遇到的问题"><span class="nav-number">1.</span> <span class="nav-text">施工后电话跳线所遇到的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#事件一"><span class="nav-number">1.1.</span> <span class="nav-text">事件一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件二"><span class="nav-number">1.2.</span> <span class="nav-text">事件二</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#电话结构原理发展概述"><span class="nav-number">2.</span> <span class="nav-text">电话结构原理发展概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#传统电话与IP电话拓扑结构"><span class="nav-number">2.1.</span> <span class="nav-text">传统电话与IP电话拓扑结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#电话设备作用求解"><span class="nav-number">3.</span> <span class="nav-text">电话设备作用求解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#光猫（model）"><span class="nav-number">3.1.</span> <span class="nav-text">光猫（model）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模拟电话、数字电话、IP电话"><span class="nav-number">3.2.</span> <span class="nav-text">模拟电话、数字电话、IP电话</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#电话交换机与线控交换机"><span class="nav-number">3.3.</span> <span class="nav-text">电话交换机与线控交换机</span></a></li></ol></li></ol></div>
             
 
           </div>
