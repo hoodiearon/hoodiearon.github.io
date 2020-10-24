@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hoochanlon.github.io/"/>
-  <updated>2020-10-19T07:17:12.232Z</updated>
+  <updated>2020-10-24T15:02:00.177Z</updated>
   <id>https://hoochanlon.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>由WiFi路由组网的联想</title>
+    <link href="https://hoochanlon.github.io/note/2020/10-24/390be9b5.html"/>
+    <id>https://hoochanlon.github.io/note/2020/10-24/390be9b5.html</id>
+    <published>2020-10-24T14:56:04.000Z</published>
+    <updated>2020-10-24T15:02:00.177Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="由WiFi路由组网的联想"><a href="#由WiFi路由组网的联想" class="headerlink" title="由WiFi路由组网的联想"></a>由WiFi路由组网的联想</h1><p>WIFI组网参考 <a href="http://www.360doc.com/content/14/0210/12/9874889_351316605.shtml" target="_blank" rel="noopener">360doc-家庭双路由器组网方案</a>，也就是联网的电脑太多，连接WiFi的人数也是有上限的，路由器的接口不够用了。</p><blockquote><p>图摘自 <a href="https://post.smzdm.com/p/700438/" target="_blank" rel="noopener">什么值得买-我是如何通过多路由器有线互联解决网络覆盖死角？我的家庭二级路由折腾小记</a></p></blockquote><p><img src="https://i.loli.net/2020/10/24/kiEl2zQmVGetpXn.png" alt="20-15-24.png"></p><h2 id="未知-疑问？"><a href="#未知-疑问？" class="headerlink" title="未知/疑问？"></a>未知/疑问？</h2><h3 id="拓扑图里的名词及设备是什么？做什么用的？"><a href="#拓扑图里的名词及设备是什么？做什么用的？" class="headerlink" title="拓扑图里的名词及设备是什么？做什么用的？"></a>拓扑图里的名词及设备是什么？做什么用的？</h3><p>一级路由：从ISP接入过来路由器就是一级路由，在LAN口的路由器就是二级路由。现在说到了二级路由，它肯定不能使用PPPOE拨号，因为这是需要用户名和密码获得电信系统认可的，这是一级路由已经完成的任务。</p><p><strong>问题来了，各自独立放置两台WIFI路由器，局域网IP范围一致，IP会不会冲突呢？</strong></p><p>并不会，只要没连LAN口就不会冲突！</p><p>两台独立WIFI路由器相当于独立的DHCP局域网服务器，但如果连接LAN而不关闭，就相当于局域网两台DHCP服务器了，必然会发生冲突（胖AP出厂默认DHCP，动态IP范围设定一致），所以这也是二级路由器需要设置不同网段、同网段不同范围的原因（做二级交换机在这基础上关闭DHCP）。</p><p><strong>为什么用AC路由器做一级路由？什么是AC路由器？</strong></p><p>这里的AC是指802.11ac协议，是第五代无线网络标准即5G WiFi。以往ADSL是百兆带宽路由器，随着智能机、视频应用的普及，就需要光纤结合千兆级别数据传输的AC路由器。</p><blockquote><p>参考 <a href="https://www.douban.com/note/412445566/" target="_blank" rel="noopener">360doc-为什么要用AC路由器</a></p></blockquote><p><strong>什么是HTPC，NAS？</strong></p><p>HTPC（Home Theater Personal Computer），即<a href="https://baike.baidu.com/item/家庭影院" target="_blank" rel="noopener">家庭影院</a>电脑，说白了就是安卓系统盒子。黑群晖即为NAS，既然百度百科说的一些名词概念我搞不清楚，那么就利用什么值得买看下NAS到底是什么？链接： <a href="https://post.smzdm.com/p/64200/" target="_blank" rel="noopener">NAS使用一年以来的琐碎心得</a>，所见即所得，其实就是厂商在Linux系统嵌入自开发的共享软件用于文件共享的存储小黑盒。</p><p>什么又是3.5硬盘盒呢？主要参考<a href="http://detail.zol.com.cn/series/274/21900_1.html" target="_blank" rel="noopener">西部数据新My Book</a>、<a href="http://storage.yesky.com/163/107228163all.shtml" target="_blank" rel="noopener">全方位备份 西部数据My Book桌面级存储评测</a>，原来就是3.5尺寸高转速TB级存储硬盘。</p><h2 id="有线电视"><a href="#有线电视" class="headerlink" title="有线电视"></a>有线电视</h2><p>在介绍AC路由器里写到的光纤了，我就想到在没有光纤的时候是用什么呢？ 翻阅资料得到：有线通是同轴线缆、电信ADSL是电话线。可有线通是什么呢？</p><p>由资料可知，有线通为各地的电视台所经营，不属于电信、铁通、移动、联通，收看电视向市区电视运营商缴费。</p><blockquote><p>图摘自 <a href="https://baike.baidu.com/item/%E6%9C%89%E7%BA%BF%E9%80%9A/553772?fr=aladdin" target="_blank" rel="noopener">百度百科-有线通</a></p></blockquote><p><img src="https://s1.ax1x.com/2020/10/24/BZIcrQ.png" alt></p><p>Cable是指有线电视网络，Modem是调制解调器。平常用Modem通过<a href="https://baike.baidu.com/item/电话/16293" target="_blank" rel="noopener">电话</a>线上互联网，而电缆调制解调器是在有线电视网络上用来上互联网的设备。</p><p><strong>用有线电视分支器怎么连接电视机？</strong></p><p>BR又称为意为分支，信号衰减较大，一般直接连接到电视机；IN是输入端口连接线缆；OUT连接下一级分支器、终端，但不能空接。</p><blockquote><p>图摘自 <a href="https://wenwen.sogou.com/z/q824014821.htm" target="_blank" rel="noopener">搜狗问问</a></p></blockquote><p><img src="https://i.loli.net/2020/10/24/hOB2Pu1A6pIMFm9.png" alt="a08.png"></p><h2 id="互联网那朵云是究竟是什么样子？"><a href="#互联网那朵云是究竟是什么样子？" class="headerlink" title="互联网那朵云是究竟是什么样子？"></a>互联网那朵云是究竟是什么样子？</h2><p><strong>又一次溯源与联想的开始，我只是想了解究竟网络到底是怎么样子！</strong></p><ul><li>我为什么能通过ISP能够访问百度？<ul><li>ISP是不是有DHCP外网地址的存储仓库？</li></ul></li><li>不同运营商宽带如何实现互相访问的？</li></ul><p><strong><em>又是七七八八的各种设备协议，为了营销更新换代的概念名词，又或是职校风格夸夸其谈“云”架构，配置重复流水的设备命令，没有一点的所见所得。</em></strong></p><p><strong><em>老是被厂商设备迭代、职校、培训讲师牵着鼻子走。这看不到本质，这不是我想要的！</em></strong></p>]]></content>
+    
+    <summary type="html">
+    
+      这篇文章是我对大众所谓的职校教育注重实操的控诉!!!
+    
+    </summary>
+    
+      <category term="工作记录" scheme="https://hoochanlon.github.io/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>由施工后跳线接入转向溯源电话运作原理</title>
@@ -388,26 +408,6 @@
     <summary type="html">
     
       查阅知乎专栏涉及到的国外著作与职业教程有感
-    
-    </summary>
-    
-      <category term="乌金向日葵" scheme="https://hoochanlon.github.io/categories/%E4%B9%8C%E9%87%91%E5%90%91%E6%97%A5%E8%91%B5/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>拖延现象·方法相对论</title>
-    <link href="https://hoochanlon.github.io/note/2020/07-30/46b66e11.html"/>
-    <id>https://hoochanlon.github.io/note/2020/07-30/46b66e11.html</id>
-    <published>2020-07-30T12:42:15.000Z</published>
-    <updated>2020-09-19T03:10:00.094Z</updated>
-    
-    <content type="html"><![CDATA[<p>我辞职在家的这一月来，确实有大把的时间；不过我在思考这个社会、这些人、这个我。尝试着去解读这个社会的运行，我们在社会上又是怎样过人生的，我又存在哪些长久没注意到的缺陷？</p><p>也还好有了网络把一些思路、论证、观点汇聚起来，在收集这些资料的过程中，我也担心失去了自己的主见，因为他们的论证对我来说都很有道理，也由于过度思考，以及一月前心中约定找工作的时间一天天到来的影响下很焦虑。虽然一直想提早进行找工作，但就像过今天还有明天的无限循环，后来我才发现原来我心里一直是有抵触的。</p><p>我抵触它，我惧怕它。从大专毕业以来，面试遭遇了挫折，如现今普遍存在的表象现状“学历歧视”、对我求职时职位担当否定、学历所涉及到的能力怀疑、<strong>求</strong>职所遇的人格尊严打击。在他们面前，我失败了很多次，深深恐惧他们，害怕在一次受到打击，也为此深陷其中。直到无奈进厂做普工，随着时间推进，我接触到厂内各个阶层的人，交谈过程中我了解到他们的职位、学历、经历，以及我结合自己的过往反思下，这才逐渐走出来。</p><p>前月份在试水找工作，面试也被三、四家婉拒了，联想起过往，自己又不由得开始抵触及害怕起来了。现在的心情是：焦虑、害怕、抵触三者交织。这也是我计划了这个找工作的任务却一直在违反规定拖延的主因。</p><hr><p>在<a href="https://zhuanlan.zhihu.com/p/88059192" target="_blank" rel="noopener">知乎 -《终结拖延症》</a>所提到的拖延症分类，给了我一些了解自己为什么拖延的思路。我所存在的拖延症包括：</p><ul><li>期限拖延症</li><li>个人事务拖延症</li><li>复杂拖延症包含的完美主义</li></ul><p>专栏提及的ABCDE方法，也是给了我很好的启发。对于持续且具有重复性发生，并具有一定未来可见性的事情，可以使用这种方法应对拖延。这也可以与先做5分钟工作法并存，与四象限事项管理融合。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">A：activating events，指发生的事件；</span><br><span class="line">B：beliefs，指人们对事件所持的观念或信念；</span><br><span class="line">C：empotional and behavioral consequences，指观念或信念所引起的情绪及行为后果；</span><br><span class="line">D：disputing irrational beliefs，指劝导干预；</span><br><span class="line">E：effect，指治疗或咨询效果。</span><br></pre></td></tr></table></figure><p>A. 我之前是约定的7月中找工作<br>B. 但我每天都觉得来得及7月到8月还有这么长的时间<br>C. 结果我逃避一直违反心中的计划，在8月份我要开始找工作<br>D. 如果我能在七月找工作是不是无形之中省了一笔房租，面试机会其实也就这么多，还可以锻炼提高自己，面试过后也有大把的时间读书。既然这次这个想法给我带来拖延和焦虑，拖延和焦虑也不是我想要的，哪下次我能不能先开始做，然后慢慢改进？<br>E. 后续进程效果</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A-&gt;B-&gt;C-&gt;D</span><br><span class="line">D-&gt;B-&gt;A-&gt;C</span><br></pre></td></tr></table></figure><blockquote><p>图片引用自 <a href="https://zhuanlan.zhihu.com/p/42322491" target="_blank" rel="noopener">知乎专栏-心知识／情绪管理：学会合理情绪疗法</a></p></blockquote><p><img src="https://s1.ax1x.com/2020/07/31/aMR1O0.jpg" alt="aMR1O0.jpg"></p>]]></content>
-    
-    <summary type="html">
-    
-      我发现一些思考制定策略并不能用在拖延上，但是结论又被推翻了！但似乎又能并存。
     
     </summary>
     
