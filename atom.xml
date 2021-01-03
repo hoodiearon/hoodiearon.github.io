@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hoochanlon.github.io/"/>
-  <updated>2020-11-30T16:24:41.665Z</updated>
+  <updated>2021-01-03T04:41:00.473Z</updated>
   <id>https://hoochanlon.github.io/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2021.1.2 周六 阴</title>
+    <link href="https://hoochanlon.github.io/note/2021/01-02/af1262a1.html"/>
+    <id>https://hoochanlon.github.io/note/2021/01-02/af1262a1.html</id>
+    <published>2021-01-02T12:31:48.000Z</published>
+    <updated>2021-01-03T04:41:00.473Z</updated>
+    
+    <content type="html"><![CDATA[<p>这个社会，底层，很无奈，也很辛酸。80岁，每月的养老钱才只有1k，可是人生老病死又是笔不小的花费。25的我，打工2年，却是没存到钱，反而还有1k的分期没还。</p><p>5300的收入，1350的房租，来回12块的地铁，20天，250左右。基本住行1700，那还剩3600；吃，早餐10块，午餐20，晚餐20。这都能剩2100，我每三天吃零食20，240块，生活用品260。这也能剩1.4k。但我却是负资产…</p><p>假设理想状况下存1.4k，12月，16800。10年，倒也是16w。留给我的时间也不多了，我唯一能做的就是努力向上爬。老了患上病却没钱医治，也许安乐死。</p><p>我已经失去了对组织所谓的主义的宗教信仰，这条路还得自己走…</p>]]></content>
+    
+    <summary type="html">
+    
+      我老了以后又是什么样呢？
+    
+    </summary>
+    
+      <category term="日记" scheme="https://hoochanlon.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>工作上的失误</title>
     <link href="https://hoochanlon.github.io/note/2020/11-30/a22e577c.html"/>
     <id>https://hoochanlon.github.io/note/2020/11-30/a22e577c.html</id>
     <published>2020-11-30T15:41:39.000Z</published>
-    <updated>2020-11-30T16:24:41.665Z</updated>
+    <updated>2020-11-30T16:25:35.493Z</updated>
     
     <content type="html"><![CDATA[<p>幸好今天算是醒悟过来了，为时不晚：</p><ul><li>我们主动帮助同事解决问题，只因嫌麻烦不想找到我…本来IT与业务相比就处于边缘化的位置，而我却把自己推向了边缘，现在却发现我自己逐渐被新同事边缘化…这也是要引起警惕的事情。</li><li>只因为事情简单而没做好汇报的问题，被质疑太久没搞定…在与主管提及到完成事情所需要的耗材，由于之前完成事情未做汇报，带来更深层次的误解；其实也不算误解，而是我的理解有问题，或是与他们观念不同：<ul><li>本质问题搞错：他们还有剩余物资但不多，我问他们是否需要采购？主管以为我没做完活搞错了本质，是我们急需，需要我们来购买，而不是他们…</li><li>由此也我发现，很多情况下，企业或是个人来说需要用时才会采购，也不会过于投入达到物资过剩的状态，并不像我这大傻瓜一样害怕物资短缺而疯狂的买买买…</li></ul></li><li>有疑问或是一些疑惑要及时胆大地反馈与主管交流，要不然主管以为我一无所知。</li></ul>]]></content>
     
@@ -388,26 +408,6 @@
     <summary type="html">
     
       一直以来，我都没有从社会的角度去考虑问题。
-    
-    </summary>
-    
-      <category term="面试经历" scheme="https://hoochanlon.github.io/categories/%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%8E%86/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>想流眼泪，但现在已经流不出一滴眼泪了</title>
-    <link href="https://hoochanlon.github.io/note/2020/08-12/db5c6ed6.html"/>
-    <id>https://hoochanlon.github.io/note/2020/08-12/db5c6ed6.html</id>
-    <published>2020-08-11T16:53:52.000Z</published>
-    <updated>2020-09-19T03:10:00.092Z</updated>
-    
-    <content type="html"><![CDATA[<p>回想在工厂与许多人打交道，也能很快乐。直到有一天，不得不走出来，做了桌面运维。现在从桌面运维走出来，真的是为了网络吗？其实，我的目的一直都是奔向工资啊…工作内容真的相关性真的重要吗？</p><p>错失了这一次人际交往且薪资很满意的工作。想哭，但已经没有给我哭的权利了，弹性的时间，我是有机会和平安的她在一起的…比之技术，我更适合与人打交道。</p>]]></content>
-    
-    <summary type="html">
-    
-      我真职业期望到底是怎样的呢？
     
     </summary>
     
