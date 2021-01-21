@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hoochanlon.github.io/"/>
-  <updated>2021-01-18T14:09:55.875Z</updated>
+  <updated>2021-01-21T14:17:00.311Z</updated>
   <id>https://hoochanlon.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2021.1.21 周四 雾霾</title>
+    <link href="https://hoochanlon.github.io/note/2021/01-21/83354e05.html"/>
+    <id>https://hoochanlon.github.io/note/2021/01-21/83354e05.html</id>
+    <published>2021-01-21T13:50:37.000Z</published>
+    <updated>2021-01-21T14:17:00.311Z</updated>
+    
+    <content type="html"><![CDATA[<p>从百度上来说，过于仔细，大脑积极细胞不高。事物优先级，过于仔细，经过此次为同事清除密码，“大费周章”用其他办法解决而不去破除密码，延误了大量时间。这是我没考虑到公司的环境，以及所处的行业，人员的素养，也没考虑到当事人也做出的必要选择。</p><p>引子：由此又联想到早期我做数学题明明会做还偏偏做错。核心思路问题、交流太少。</p>]]></content>
+    
+    <summary type="html">
+    
+      我发现一个有重要的点，就是明明会做的事情，效率也不高。
+    
+    </summary>
+    
+      <category term="日记" scheme="https://hoochanlon.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>2021.1.8 周一 🌤</title>
@@ -392,26 +412,6 @@
     </summary>
     
       <category term="面试经历" scheme="https://hoochanlon.github.io/categories/%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%8E%86/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>在职时从来没思考过真正的找工作</title>
-    <link href="https://hoochanlon.github.io/note/2020/08-13/30870525.html"/>
-    <id>https://hoochanlon.github.io/note/2020/08-13/30870525.html</id>
-    <published>2020-08-12T22:28:43.000Z</published>
-    <updated>2020-09-19T03:10:00.091Z</updated>
-    
-    <content type="html"><![CDATA[<p>以前找工作很少有面试机会，仅只关注到简历没写好，而不是更深层次的社会及企业的人才需求，也就是要有空位，有这个空缺才能招人。当时我的简历很好，也很6、7家面试机会，而现在基本没有了…自己傻乎乎的主动放弃。</p><p>以前我从来没有进行面试投递的数据分析，投递简历通过机率，还有面试通过机率。也没有审时度势去用发展的眼光看问题，其实以前我的工作就是沟通，但由于桌面技术实在太差了，反而认为了是技术。想要找技术薪资在那要求也在那，我呢，确实没有达到，但就是这样都错过了顺丰白给的外包工作机会（沟通）。</p>]]></content>
-    
-    <summary type="html">
-    
-      反思，分析
-    
-    </summary>
-    
-      <category term="面试" scheme="https://hoochanlon.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
     
     
   </entry>
